@@ -1,4 +1,4 @@
-# Pinterest-Layout
+# Pinterest Layout
 
 <img src="https://raw.githubusercontent.com/ytiamahtrap/Pinterest-Layout/main/pLayout.png" align="right"
      alt="Waterfall Layout" width="30%">
