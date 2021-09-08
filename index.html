@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinterest Layout</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        .container {
+            display: grid;
+            padding: 40px;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-auto-rows: 10px;
+            grid-auto-flow: dense;
+        }
+
+        .box {
+            background-color: lightgreen;
+            border-radius: 10px;
+            grid-row: span 17;
+        }
+
+        .container>div:nth-of-type(2n) {
+            grid-row: span 13;
+            background-color: lightsalmon;
+        }
+
+        .container>div:nth-of-type(3n+3) {
+            grid-row: span 7;
+            background-color: lightslategray;
+        }
+
+        .container>div:nth-of-type(3n+5) {
+            grid-row: span 15;
+            background-color: lightskyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <script>
+        window.onscroll = function (ev) {
+            if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight)) {
+                const container = document.querySelector('.container');
+
+                container.insertAdjacentHTML('beforeend', `${'<div class="box"></div>'.repeat(50)}`);
+            }
+        };
+    </script>
+</body>
+
+</html>
